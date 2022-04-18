@@ -2,112 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../media/favicon-32x32.png">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <title>Tu amigo fiel 🐾</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../media/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="../css/estilo.css">
+  <title>Tu amigo fiel 🐾</title>
 
 </head>
 
 <body class="bodyContacto">
-    <header class="header">
-        <img class="logo" src="../media/logo.png" alt="Logo tu amigo fiel">
-            
-            <nav>
-                <ul class="menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="../pages/productos.html">Productos</a></li>
-                    <li><a href="../pages/turnos.html">Turnos</a></li>
-                </ul>
-            </nav>
-    </header>
-    
-    <!-- Acá va info sobre "quienes somos" -->
-   
-<main class="mainContacto">
-    <div class="sectionContacto">
-            <section class="quienesSomos">
-                <h3>Quienes somos</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere quam, ullam quae soluta illo rerum
-                    iure
-                    aperiam culpa quod deserunt voluptatum quaerat, perferendis consequuntur necessitatibus animi laborum
-                    temporibus
-                    laudantium, aliquid veniam eius numquam corporis incidunt! Animi expedita et asperiores explicabo
-                    laboriosam.</p>
-                <!--Video de presentación / fotos de productos y empleados-->
-            </section>
-        
-            <!--link a google maps con la ubicación-->
-        
-            <section class="contactanos">
-                <h3>Contactanos!</h3>
-                <p>Para turnos o consultas te podes comunicar con nosotros por redes sociales o a los siguientes teléfonos</p>
-                <ul class="telefonos">
-                    <li>11111111</li>
-                    <li>22222222</li>
-                </ul>
-        
-                <p>Si no, dejanos tu consulta y te contactamos!</p>
-        
-                <form action="">
-                    <fieldset>
-                        <legend>Formulario de 
-                            contacto</legend>
-                        <div>
-                            <label for="nombre">Escribe tu nombre</label>
-                            <input type="text" placeholder="Nombre" name="nombre" required>
-                        </div><br>
-                        <div>
-                            <label for="apellido">Escribe tu apellido</label>
-                            <input type="text" name="apellido" placeholder="Apellido">
-                        </div><br>
-                        <div>
-                            <label for="email">Dejanos tu mail *</label>
-                            <input type="email" name="email" placeholder="correo@ejemplo.com" required>
-                        </div><br>
-                        <div>
-                            <label for="celular">Dejanos tu teléfono</label>
-                            <input type="number" name="celular">
-                        </div><br>
-                        <div>
-                            <label for="comentario">¿Cuál es tu consulta?</label><br>
-                            <textarea class="areaConsulta" name="comentario" id="" cols="30" rows="20"
-                                placeholder="¡Si gustás, Dejanos tu consulta aquí para que podamos responderte de manera eficiente!"></textarea>
-                        </div>
-                        <br>
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Borrar">
-                    </fieldset>
-        
-                </form>
-            </section>
-</div>
+  <header class="header container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img class="logo animate__animated animate__headShake animate__infinite	animate__slower"
+              src="../media/logo.png" alt="Logo tu amigo fiel">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="../index.html">
+                  <div class="navText">Inicio</div>
+                </a></li>
+              <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="./nosotros.html">
+                  <div class="navText">Nosotros</div>
+                </a></li>
+              <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="./productos.html">
+                  <div class="navText">Productos</div>
+                </a></li>
+              <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="./turnos.html">
+                  <div class="navText">Turnos</div>
+                </a></li>
+              <li class="nav-item">
+                <a class="nav-link text-white active activeNavText" aria-current="page" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-</main>
+  <!-- Acá va info sobre "quienes somos" -->
 
-<aside class="asideContacto">
-    <h3>Ubicación</h3>
-    <iframe class="mapaUbicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.37560005535!2d-58.500442885140394!3d-34.56936158046841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6f83a3998bf%3A0x517b09b1947eab6!2sJos%C3%A9%20Pascual%20Tamborini%205693%2C%20C1431AGU%20CABA!5e0!3m2!1ses-419!2sar!4v1648414652888!5m2!1ses-419!2sar" width="400" style="border: 1px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</aside>
+  <main class="mainContacto container-fluid">
+    <div class="sectionContacto row">
+      <section class="quienesSomos col-xs-12 col-md-6 ">
+        <h3>Quienes somos</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci facere quam, ullam quae soluta illo rerum
+          iure
+          aperiam culpa quod deserunt voluptatum quaerat, perferendis consequuntur necessitatibus animi laborum
+          temporibus
+          laudantium, aliquid veniam eius numquam corporis incidunt! Animi expedita et asperiores explicabo
+          laboriosam.</p>
+        <!--Video de presentación / fotos de productos y empleados-->
+      </section>
+
+      <section class="col-xs-12 col-md-6">
+        <!--link a google maps con la ubicación-->
+        <h3>Ubicación</h3>
+        <iframe class="mapaUbicacion"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.37560005535!2d-58.500442885140394!3d-34.56936158046841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6f83a3998bf%3A0x517b09b1947eab6!2sJos%C3%A9%20Pascual%20Tamborini%205693%2C%20C1431AGU%20CABA!5e0!3m2!1ses-419!2sar!4v1648414652888!5m2!1ses-419!2sar"
+          style="border: 1px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </div>
+
+  </main>
+
+  <aside class="asideContacto container-fluid">
+
+    <section class="contactanos col-xs-12">
+      <h3>Contactanos!</h3>
+      <p>Para turnos o consultas te podes comunicar con nosotros por redes sociales o a los siguientes teléfonos</p>
+      <ul class="telefonos">
+        <li>11111111</li>
+        <li>22222222</li>
+      </ul>
+
+      <p>Si no, dejanos tu consulta y te contactamos!</p>
+
+      <form>
+        <div class="mb-3 col-md-3">
+          <label for="inputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3 col-md-3">
+          <label for="inputNombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="inputNombre">
+        </div>
+        <div class="mb-3 col-md-3">
+          <label for="inputApellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="inputApellido">
+        </div>
+        <div class="mb-3 col-md-3">
+          <label for="inputPhone" class="form-label">Teléfono</label>
+          <input type="number" class="form-control" id="inputNombre">
+        </div>
+        <div class="form-floating mb-3">
+          <p>¡Si gustás, Dejanos tu consulta aquí para que podamos responderte de manera eficiente!</p>
+          <textarea class="form-control " placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+          <label for="floatingTextarea"></label>
+        </div>
+        <button type="submit" class="btn btn-warning">Enviar</button>
+        <button type="reset" class="btn btn-secondary">Borrar</button>
+      </form>
+
+    </section>
+  </aside>
 
 
-    <footer class="footer">
-        <h3>Visitanos en nuestras redes!</h3>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/" target="is_blank">Instagram</a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/" target="is_blank">Facebook</a>
-            </li>
+  <footer class="footer container-fluid">
+    <div class="row">
+      <h3 class="col-xs-12">Visitanos en nuestras redes!</h3>
+      <div class="col-xs-12">
+        <ul class="footerList d-flex flex-row">
+          <li class="pe-2">
+            <a class="navText" href="https://www.instagram.com/" target="is_blank">Instagram</a>
+          </li>
+          <li>
+            <a class="navText" href="https://www.facebook.com/" target="is_blank">Facebook</a>
+          </li>
         </ul>
-    </footer>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

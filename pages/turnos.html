@@ -6,35 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../media/favicon-32x32.png">
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../css/estilo.css">
     <title>Tu amigo fiel 🐾</title>
 
 </head>
 
 <body class="bodyTurnos">
-    <header class="header">
-        <img class="logo" src="../media/logo.png" alt="Logo tu amigo fiel">
-            
-           <nav>
-                <ul class="menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="../pages/productos.html">Productos</a></li>
-                    <li><a href="../pages/contacto.html">Contacto</a></li>
-                </ul>
+    <header class="header container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img class="logo animate__animated animate__headShake animate__infinite	animate__slower"
+                            src="../media/logo.png" alt="Logo tu amigo fiel">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="../index.html">
+                                    <div class="navText">Inicio</div>
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="./nosotros.html">
+                                    <div class="navText">Nosotros</div>
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="./productos.html">
+                                    <div class="navText">Productos</div>
+                                </a></li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white active activeNavText" aria-current="page"
+                                    href="#">Turnos</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-white text-opacity-50" href="./contacto.html">
+                                    <div class="navText">Contacto</div>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
+        </div>
     </header>
- 
-   <main class="mainTurnos">
-        <section>
-               <!-- Acá irá la tabla de turnos con horarios que indique si el turno ya está tomado o no, está será unicamente informativa para los clientes pero que si pueda ser modificada por el dueño del local para que el cliente reciba toda la información mediante un contacto con el dueño previo a tomar el turno ya que esto dependera de tamaño del animal largo del pelo, si es solo baño, baño y corte, etc. Además de asegurar la reserva. también puede haber fotos de animales que ya hayan pasado por la peluquería-->
-            <h3>Conocé nuestros turnos disponibles de peluquería!</h3>
-            <p>Podes comunicarte con nosotros para realizar tu reserva o dejarnos tus datos y nosotros te contactamos.</p>
-            
-            <table class="tablaTurnos" cellpadding="1" cellspacing="1">
+
+    <main class="mainTurnos container-fluid">
+        <section class="row">
+            <!-- Acá irá la tabla de turnos con horarios que indique si el turno ya está tomado o no, está será unicamente informativa para los clientes pero que si pueda ser modificada por el dueño del local para que el cliente reciba toda la información mediante un contacto con el dueño previo a tomar el turno ya que esto dependera de tamaño del animal largo del pelo, si es solo baño, baño y corte, etc. Además de asegurar la reserva. también puede haber fotos de animales que ya hayan pasado por la peluquería-->
+            <h3 class="col-xs-12 textoTurnos">Conocé nuestros turnos disponibles de peluquería!</h3>
+            <p class="col-xs-12 textoTurnos">Podes comunicarte con nosotros para realizar tu reserva o dejarnos tus
+                datos y nosotros te contactamos.</p>
+
+            <table class="tablaTurnos col-xs-12 mx-auto overflow-auto" cellpadding="1" cellspacing="1">
+
                 <tr>
                     <th>Lunes</th>
                     <th>Martes</th>
@@ -49,7 +80,7 @@
                     <td>9 a 10</td>
                     <td>9 a 10</td>
                     <td>9 a 10</td>
-                    <td>9 a 10</td>               
+                    <td>9 a 10</td>
                 </tr>
                 <tr>
                     <td>10 a 11</td>
@@ -57,7 +88,7 @@
                     <td>10 a 11</td>
                     <td>10 a 11</td>
                     <td>10 a 11</td>
-                    <td>10 a 11</td>               
+                    <td>10 a 11</td>
                 </tr>
                 <tr>
                     <td>11 a 12</td>
@@ -65,7 +96,7 @@
                     <td>11 a 12</td>
                     <td>11 a 12</td>
                     <td>11 a 12</td>
-                    <td>11 a 12</td>               
+                    <td>11 a 12</td>
                 </tr>
                 <tr>
                     <td>16 a 17</td>
@@ -73,7 +104,7 @@
                     <td>16 a 17</td>
                     <td>16 a 17</td>
                     <td>16 a 17</td>
-                    <td>16 a 17</td>               
+                    <td>16 a 17</td>
                 </tr>
                 <tr>
                     <td>17 a 18</td>
@@ -81,29 +112,39 @@
                     <td>17 a 18</td>
                     <td>17 a 18</td>
                     <td>17 a 18</td>
-                    <td>17 a 18</td>               
+                    <td>17 a 18</td>
                 </tr>
-    
+
+
             </table>
             <br>
-    
-            <a href="../pages/contacto.html">Contacto</a>
-            <br>
-    
-        </section>
-   </main>
 
-<footer class="footer">
-    <h3>Visitanos en nuestras redes!</h3>
-    <ul>
-        <li>
-            <a href="https://www.instagram.com/" target="is_blank">Instagram</a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/" target="is_blank">Facebook</a>
-        </li>
-    </ul>
-</footer>
+            <a class="navText" href="../pages/contacto.html">Contacto</a>
+            <br>
+
+        </section>
+    </main>
+
+    <footer class="footer container-fluid">
+        <div class="row">
+            <h3 class="col-xs-12">Visitanos en nuestras redes!</h3>
+            <div class="col-xs-12">
+                <ul class="footerList d-flex flex-row">
+                    <li class="pe-2">
+                        <a class="navText" href="https://www.instagram.com/" target="is_blank">Instagram</a>
+                    </li>
+                    <li>
+                        <a class="navText" href="https://www.facebook.com/" target="is_blank">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
