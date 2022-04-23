@@ -1,0 +1,32 @@
+$grisClaro: rgba(255, 255, 255, 0.801);
+$blanco: antiquewhite;
+$gris: rgba(255, 255, 255, 0.514);
+$tipografiaTitulos: 'Permanent Marker', cursive;
+$tipografiaTextos: 'Montserrat', sans-serif;
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ff4e00;
+    background-image: linear-gradient(to top,#ec9f05 0%, #ff4e00 20%, #ec9f05 74%); 
+    
+}
+
+@import "tipografias";
+@import "header";
+@import "footer";
+@import "inicio";
+@import "turnos";
+@import "contacto";
+@import "responsive";
+
+
+
+
+
+
+

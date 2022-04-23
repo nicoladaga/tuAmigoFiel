@@ -1,0 +1,14 @@
+h1, h2, h3, h4, h5, h6, form legend{
+    font-family: $tipografiaTitulos;
+    color: $grisClaro;
+}
+
+a, li, th{
+    font-family: $tipografiaTitulos;
+    color: $gris;
+}
+
+p, td, form label{
+    font-family: $tipografiaTextos;
+    color: $blanco;
+}
