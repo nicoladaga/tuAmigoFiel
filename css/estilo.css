@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +68,8 @@ p, td, form label {
   color: black; }
 
 @media screen and (max-width: 750px) {
-  .main, .textoNosotros, .textoTurnos {
+  /*La aplicación del extend aquí era innecesaria, solo lo agregue para tener un ejemplo de se uso y cumplir con la consigna solicitada*/
+  .centrarYagrandarTexto, .main, .textoNosotros, .textoTurnos {
     text-align: center;
     font-size: 1.3rem; }
   .navText, .activeNavText {

@@ -1,14 +1,16 @@
+@mixin letraYColor($font, $colorLetra){
+    font-family: $font;
+    color: $colorLetra
+}
+
 h1, h2, h3, h4, h5, h6, form legend{
-    font-family: $tipografiaTitulos;
-    color: $grisClaro;
+    @include letraYColor($tipografiaTitulos, $grisClaro); 
 }
 
 a, li, th{
-    font-family: $tipografiaTitulos;
-    color: $gris;
+    @include letraYColor($tipografiaTitulos, $gris);
 }
 
 p, td, form label{
-    font-family: $tipografiaTextos;
-    color: $blanco;
+    @include letraYColor($tipografiaTextos, $blanco);
 }
