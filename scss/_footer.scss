@@ -3,4 +3,14 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding: 0;
+}
+
+.footIcons{
+    font-size: 200%;
+    transition: all 1s;
+    &:hover{
+        color: $blanco;
+        font-size: 300%;
+    }
 }

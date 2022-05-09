@@ -1,6 +1,8 @@
 Cambios de la última versión:
-1. Se aplicó un mixin en _tipografias.scss
-2. Se aplicó un extend en _resposive.scss (era innecesario pero se hizo para cumplir con la consigna de la semana)
-3. Se optimizaron todas las fotos reduciendo a la mitad su peso
-4. Se quitó la animación del Logo en todas páginas
-5. Se agregaron descriptions y keywords en todos los html y se modificaron los titles para que sean más específicos.
+1. Se unieron la pantalla de Inicio y nosotros en una sola y se adaptó para mobile
+2. Se reemplazo el video de relleno de la página de inicio por un nuevo video de presentación 
+3. Se agregaron íconos en los links de redes para reemplazar las palabras escritas con texto
+4. se actualizó el mapa de la página de contacto con la ubicación actual del negocio.
+5. Se reemplazaron todos los Lorem por redacciones descriptivas
+6. Se volvieron a optimizar los titles para que sean mas concisos
+

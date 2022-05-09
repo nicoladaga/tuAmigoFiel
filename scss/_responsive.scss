@@ -1,14 +1,25 @@
 @media screen and (max-width: 750px){
 
-    /*La aplicación del extend aquí era innecesaria, solo lo agregue para tener un ejemplo de se uso y cumplir con la consigna solicitada*/
 
     .centrarYagrandarTexto{
         text-align: center;
         font-size: 1.3rem;
     }
 
-    .main, .textoNosotros, .textoTurnos{
-        @extend .centrarYagrandarTexto
+    .main, .textoTurnos{
+        @extend .centrarYagrandarTexto;
+    }
+
+    .videoNosotros{
+        padding-top: 1rem;
+    }
+    
+    .sectionNosotros{
+        align-items: center;
+        .textoNosotros{
+            @extend .centrarYagrandarTexto;
+            justify-content: center;
+        }
     }
 
     .navText, .activeNavText{
