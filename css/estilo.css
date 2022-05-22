@@ -4,8 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #ff4e00;
-  background-image: linear-gradient(to top, #ec9f05 0%, #ff4e00 20%, #ec9f05 74%); }
+  background-color: #ff4e00; }
 
 h1, h2, h3, h4, h5, h6, form legend {
   font-family: "Permanent Marker", cursive;
@@ -19,8 +18,12 @@ p, td, form label {
   font-family: "Montserrat", sans-serif;
   color: antiquewhite; }
 
+.header {
+  background-color: #ec7105;
+  background-image: linear-gradient(to bottom, #ec9f05 0%, #ff4e00 85%); }
+
 .logo {
-  width: 10rem; }
+  width: 5rem; }
 
 .navText, .activeNavText {
   font-size: larger; }
@@ -50,17 +53,28 @@ p, td, form label {
   flex-direction: row;
   align-items: center; }
 
-.imgAsideInicio {
-  width: 14rem;
-  border: 2px rgba(255, 255, 255, 0.514);
-  border-radius: 3%;
-  margin-bottom: 0.1rem; }
-
 .sectionNosotros {
   align-items: center; }
   .sectionNosotros .textoNosotros {
     text-align: right;
     justify-content: end; }
+
+.textoContenido {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  z-index: 20; }
+  .textoContenido .subtextoBanner {
+    padding-left: 7rem;
+    font-family: "Montserrat", sans-serif; }
+
+.carousel-inner:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); }
 
 .tablaTurnos {
   display: flex;

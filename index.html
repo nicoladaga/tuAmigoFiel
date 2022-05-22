@@ -28,7 +28,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img class="logo"
-              src="./media/logo.png" alt="Logo tu amigo fiel">
+              src="./media/logoSinTexto.png" alt="Logo tu amigo fiel">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -36,7 +36,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
                 <a class="nav-link text-white active activeNavText" aria-current="page" href="#">Inicio</a>
               </li>
@@ -59,55 +59,42 @@
   <!-- Acá va info de la tienda, horarios, medios de pago disponibles, canales de compra, imágenes de los productos y de mascotas clientes -->
   <div class="container-fluid">
     <div class="row">
-      <main class="main col-md-9 d-flex">
-        <section class="sectionInicio">
-          <p class="textoInicio">Tu Amigo Fiel es una tienda fundada en febrero de 2013 en el barrio de Villa Urquiza y recientemente ubicada en Andonaegui 2919. Nuestro objetivo es brindarte el mejor servicio y productos para el cuidado de tus mascotas. Aquí vas a poder encontrar los mejores alimentos balanceados tanto sueltos y fraccionados como en bolsa, trabajamos marcas de renombre como Royal Canin, Purina (Proplan, Excellent, Dog chow), Vital can, Eukanuba y más. También tenemos variedad de juguetes, y los mejores accesorios de moda e higiene. Por último, pero no menos importante, ¡No te pierdas de nuestro excelente servicio de Baño y Peluquería canina y felina!</p>
-        </section>
-      </main>
-      <aside class="asideInicio col-md-3">
+      <aside class="asideInicio col-md-12 p-0 pb-5">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./media/fotoEntrada.jpeg" class="d-block w-100" alt="foto entrada">
+              <img src="./media/fotoEntrada.jpg" class="d-block w-100 imgAsideInicio" alt="foto entrada">
+            </div>
+            <div class="textoContenido">
+              <h2 class="textoBanner">Tu Amigo Fiel</h1>
+              <h4 class="subtextoBanner">Tienda de Mascotas</h4>
             </div>
             <div class="carousel-item">
-              <img src="./media/fotoVidriera1.jpeg" class="d-block w-100" alt="foto vidriera 1">
+              <img src="./media/fotoVidriera1.jpg" class="d-block w-100" alt="foto vidriera 1">
             </div>
             <div class="carousel-item">
-              <img src="./media/fotoVidriera2.jpeg" class="d-block w-100" alt="foto vidriera 2">
+              <img src="./media/fotoVidriera2.jpg" class="d-block w-100" alt="foto vidriera 2">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </aside>
+      <main class="main col-md-6 d-flex">
+        <section class="sectionInicio">
+          <p class="textoInicio">Tu Amigo Fiel es una tienda fundada en febrero de 2013 en el barrio de Villa Urquiza y recientemente ubicada en Andonaegui 2919. Nuestro objetivo es brindarte el mejor servicio y productos para el cuidado de tus mascotas. Aquí vas a poder encontrar los mejores alimentos balanceados tanto sueltos y fraccionados como en bolsa, trabajamos marcas de renombre como Royal Canin, Purina (Proplan, Excellent, Dog chow), Vital can, Eukanuba y más. También tenemos variedad de juguetes, y los mejores accesorios de moda e higiene. Por último, pero no menos importante, ¡No te pierdas de nuestro excelente servicio de Baño y Peluquería canina y felina!.</p>
+          
+          <p class="textoInicio"> Vení a visitarnos y conocenos, somos Laura y Rubén quienes nos encargamos de atenderte y brindarte los mejores productos. Alejandra, es quien estará asesorandote y ocupandose del servicio de baño y peluquería para dejar a tu pequeño amigo ¡Más bello que nunca!. Podrás encontrarnos de Lunes a viernes de 10hs a 20hs y los sábados de 10hs a 14hs.</p>
+        </section>
+      </main>
+      <section class="sectionNosotros col-xs-12 col-sm-12 col-md-6">
+
+        <iframe class="videoNosotros w-100 h-100" src="https://www.youtube.com/embed/EBrOK0qo1rM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+     </section>
     </div>
-    <section class="row sectionNosotros">
 
-      <iframe class="videoNosotros col-xs-12 col-sm-12 col-md-3" src="https://www.youtube.com/embed/EBrOK0qo1rM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <p class="textoNosotros col-xs-12 col-md-9 justify-end">Vení a visitarnos y conocenos, somos Laura y Rubén quienes nos encargamos de atenderte y brindarte los mejores productos. Alejandra, es quien estará asesorandote y ocupandose del servicio de baño y peluquería para dejar a tu pequeño amigo ¡Más bello que nunca!. Podrás encontrarnos de Lunes a viernes de 10hs a 20hs y los sábados de 10hs a 14hs.</p>
-      <br>
-  </section>
   </div>
 
-  <footer class="footer container-fluid">
+  <footer class="footer container-fluid pt-2">
     <div class="row">
       <h3 class="col-xs-12">Visitanos en nuestras redes!</h3>
       <div class="col-xs-12">
