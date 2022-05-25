@@ -6,7 +6,7 @@
 body {
   background-color: #ff4e00; }
 
-h1, h2, h3, h4, h5, h6, form legend {
+h1, h2, h3, h4, h5, h6, .accordion-button, form legend {
   font-family: "Permanent Marker", cursive;
   color: rgba(255, 255, 255, 0.801); }
 
@@ -76,20 +76,23 @@ p, td, form label {
   right: 0;
   background: rgba(0, 0, 0, 0.6); }
 
-.tablaTurnos {
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-content: center;
-  overflow: auto;
-  width: 90%; }
-  .tablaTurnos th, .tablaTurnos td {
-    border: 0.1rem;
-    border-color: rgba(255, 255, 255, 0.514);
-    border-style: solid;
-    border-collapse: collapse;
-    padding: 0.2rem;
-    border-radius: 3%; }
+.accordion-button {
+  background-color: #ec7105; }
+
+.accordion-button:not(.collapsed) {
+  color: #ec9f05; }
+
+.card {
+  width: 8rem; }
+  .card .imgCard {
+    height: 15rem; }
+  .card .card-title, .card .card-text, .card .textoBoton {
+    color: black;
+    font-size: 80%; }
+
+.accordion-body {
+  background-color: #ff4e00;
+  color: antiquewhite; }
 
 @media screen and (max-width: 750px) {
   .centrarYagrandarTexto, .main, .textoTurnos, .sectionNosotros .textoNosotros {

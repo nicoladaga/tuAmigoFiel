@@ -1,0 +1,23 @@
+.accordion-button{
+    background-color: $colorSecundario;
+}
+
+.accordion-button:not(.collapsed) {
+    color: $colorTerciario;
+}
+
+.card{ 
+    width: 8rem;
+    .imgCard{
+        height: 15rem;
+    }
+    .card-title, .card-text, .textoBoton{
+        color: black;
+        font-size: 80%;
+    }
+}
+
+.accordion-body{
+    background-color: $colorPrimario;
+    color: $blanco;
+}

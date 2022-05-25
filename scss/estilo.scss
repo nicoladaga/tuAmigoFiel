@@ -3,6 +3,9 @@ $blanco: antiquewhite;
 $gris: rgba(255, 255, 255, 0.514);
 $tipografiaTitulos: 'Permanent Marker', cursive;
 $tipografiaTextos: 'Montserrat', sans-serif;
+$colorPrimario: #ff4e00;
+$colorSecundario: #ec7105;
+$colorTerciario: #ec9f05;
 
 *{
     margin:0;
@@ -11,7 +14,7 @@ $tipografiaTextos: 'Montserrat', sans-serif;
 }
 
 body{
-    background-color: #ff4e00;
+    background-color: $colorPrimario;
     
 }
 
@@ -19,7 +22,7 @@ body{
 @import "header";
 @import "footer";
 @import "inicio";
-@import "turnos";
+@import "productos";
 @import "responsive";
 
 

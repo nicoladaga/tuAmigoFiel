@@ -3,7 +3,7 @@
     color: $colorLetra
 }
 
-h1, h2, h3, h4, h5, h6, form legend{
+h1, h2, h3, h4, h5, h6, .accordion-button, form legend{
     @include letraYColor($tipografiaTitulos, $grisClaro); 
 }
 
