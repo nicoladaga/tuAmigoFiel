@@ -1,76 +1,69 @@
 
-// Creación del Carrito de compras
-let carrito = {
-    total: 0,
-    cantidadElementos: 0,
-    vacio: true
 
-}
 
-//Definición de los objetos de tipo Producto
+//Función que permite agregar productos al carrito si hay stock suficiente
 
-function Producto(nombre, precio){
+function agregarAlCarrito(producto){
 
-    this.nombre = nombre;
-    this.precio = precio;
-    this.agregadoAlCarrito = false;
-}
-
-//Instanciación de algunos productos para utilizar de prueba
-
-let balancedGatoAd = new Producto("Balanced Gato Adulto", 5000);
-let catChowAd = new Producto("CatChow Gato Adulto", 4000);
-let balancedPerroAd = new Producto("Balanced perro Adulto", 3500);
-let premiumPerroAd  = new Producto("Premium Perro Adulto", 3200);
-let proplanPerroAd = new Producto("Proplan Perro Adulto", 4300);
-
-//Función que permite agregar productos al carrito valida si el producto ya se encuentra agregado o no (aún no manejo stocks)
-
-function agregarAlCarrito(Producto){
-
-    if(Producto.agregadoAlCarrito){
-        alert("El producto ya está en el carrito, no puede agregarlo 2 veces");
-    }else{
-        carrito.total = carrito.total + Producto.precio;
-        carrito.cantidadElementos++;
-        carrito.vacio = false;
-        Producto.agregadoAlCarrito = true;
-        return console.log("Se agrego", Producto.nombre, "al carrito");
-    }
-}
-
-//función que permite quitar un producto del carrito
-
-function quitarDelCarrito(Producto){
-
-    if(Producto.agregadoAlCarrito == true){
-        Producto.agregadoAlCarrito = false;
-        carrito.total = carrito.total - Producto.precio;
-        carrito.cantidadElementos--;
-        console.log("el total del carrito es ahora de", carrito.total)
-        if(carrito.cantidadElementos == 0){
-            carrito.vacio = true;
-            alert("El carrito ahora se encuentra vacío")
-        }
+    if(producto.stock > 0){
+        carrito.push(producto);
+        producto.quitarStock(1);
+        console.log("se agrego el producto", producto.nombre, "al carrito")
     } else{
-        console.log("El producto no está en el carrito")
+        alert("no hay stock del producto seleccionado")
     }
+    
+}
 
+
+//función que permite quitar un producto del carrito usando su índice
+
+function quitarDelCarrito(producto){
+
+    if(carrito.includes(producto)){
+
+        carrito.splice(carrito.indexOf(producto), 1);
+        producto.agregarStock(1);
+
+    }else{
+        alert("el producto no se encuentra en el carrito")
+    }
+}
+
+function verTotalCarrito(){
+
+    const valoresCarrito = [];
+    carrito.forEach( (producto) => {
+        valoresCarrito.push(producto.precio);
+    } )
+    const total = valoresCarrito.reduce((acumulador, valor) => acumulador + valor, 0)
+
+    console.log("el total del carrito es de", total);
+    return total;
+}
+
+function listarCarrito(){
+    console.table(carrito)
 }
 
 //la función "finaliza" la compra y vacía el carrito 
 
 function finalizarCompra(){
    
-    if(carrito.vacio){
-        alert("No hay nada agregado en el carrito")
-    } else if(confirm("¿Desea realizar el pago?")){
-        alert("Se abonó el valor total del carrito")
-        carrito.total = 0;
-        carrito.cantidadElementos = 0;
-        carrito.vacio= true;
-    } else {
-        alert("Puede continuar comprando")
+    if(verTotalCarrito() == 0){
+        alert("el carrito se encuentra vacío")
+    } else{
+        if(confirm("¿Desea abonar?")){
+            
+           //este while limpia el carrito quitando el producto que se encuentra primero en la lista de manera sucesiva hasta que el carrito se encuentre vacío. uso específicamente la función quitar del carrito para que me restaure el stock y se "resetee".
+           while(carrito.length > 0){
+               quitarDelCarrito(carrito[0]);
+           }
+
+            console.log("se completó la transacción");
+        } else{
+            console.log("puede continuar comprando");
+        }
     }
    
 }
