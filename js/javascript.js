@@ -1,15 +1,40 @@
 
+//función que guarda el carrito en local Storage
+function guardarCarritoEnLocalStorage(){
+    let carritoJson = JSON.stringify(carrito);
+    localStorage.setItem("carrito", carritoJson);
+}
+
+function descargarCarritoDeLocalStorage(){
+    let carritoJson = JSON.parse(localStorage.getItem('carrito'))
+
+    for(let producto of carritoJson){
+        //carrito.push(new Producto(producto.nombre, producto.precio));
+        agregarAlCarrito(new Producto(producto.nombre, producto.precio));
+    }
+}
 
 
 //Función que permite agregar productos al carrito si hay stock suficiente
 
 function agregarAlCarrito(producto){
-    
+
     if(almacen.consultarStock(producto) > 0){
 
         carrito.push(producto);
         almacen.quitarStock(producto, 1);
-        
+        guardarCarritoEnLocalStorage();
+    } else{
+        alert("no hay stock del producto seleccionado")
+    }
+}
+
+
+
+//función que carga los productos del carrito al HTML de carrito.html
+
+function cargarCarrito(producto){
+
         const liNuevoProducto = document.createElement("li");
                 liNuevoProducto.className = "border-bottom border-light border-3 fs-5";
                 liNuevoProducto.innerHTML = `<strong>Producto: </strong> ${producto.nombre} <strong>Precio: </strong> ${producto.precio}`;
@@ -17,30 +42,23 @@ function agregarAlCarrito(producto){
                 liNuevoProducto.addEventListener("dblclick", ()=> quitarDelCarrito(producto));
                 listadoCarrito.append(liNuevoProducto);
 
-    } else{
-        alert("no hay stock del producto seleccionado")
     }
-    
-}
+
 
 //función que permite quitar un producto del carrito usando su índice
 
 function quitarDelCarrito(producto){
 
-    if(carrito.includes(producto)){
-
         carrito.splice(carrito.indexOf(producto), 1);
         almacen.agregarStock(producto, 1);
+        guardarCarritoEnLocalStorage();
 
         const productoARemoverId = producto.nombre + "EnCarrito";
         const productoARemover = document.getElementById(productoARemoverId);
-        productoARemover.remove()
+        productoARemover.remove();
         console.warn(`${producto.nombre} ha sido eliminado del carrito.`)
-        
+        textoTotalCarrito.innerText = "Total: $" + verTotalCarrito();
 
-    }else{
-        alert("el producto no se encuentra en el carrito")
-    }
 }
 
 function verTotalCarrito(){
@@ -51,7 +69,6 @@ function verTotalCarrito(){
     } )
     const total = valoresCarrito.reduce((acumulador, valor) => acumulador + valor, 0)
 
-    console.log("el total del carrito es de", total);
     return total;
 }
 
@@ -61,7 +78,6 @@ function listarCarrito(){
 
 //la función "finaliza" la compra y vacía el carrito 
 
-botonComprar.addEventListener("click", finalizarCompra);
 
 function finalizarCompra(){
 
@@ -89,7 +105,7 @@ function finalizarCompra(){
 
 }
 
-botonVaciar.addEventListener("click", vaciarCarrito);
+
 
 function vaciarCarrito(){
     if(verTotalCarrito() == 0){
@@ -104,7 +120,7 @@ function vaciarCarrito(){
            while(carrito.length > 0){
                quitarDelCarrito(carrito[0]);
            }
-
+           
             console.log("El carrito se encuentra ahora vacío, puede continuar comprando");
         } 
         else{

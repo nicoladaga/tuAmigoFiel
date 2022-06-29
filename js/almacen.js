@@ -7,12 +7,21 @@ class Almacen{
     // metodo que agrega stock a un producto existente, si no existe, lo agrega al array de productos. los array de stock y productos siempre se editan juntos para que mantengan el mismo índice y el array de stock se consulta a partir del índice donde se encuentra el producto seleccionado
     agregarStock(producto, cantidad){
 
-        this.producto = producto;
-        this.cantidad = cantidad;
+        let incluido;
+        let indice;
+        for (let elemento of productos){
+            if(elemento.nombre == producto.nombre){
+                incluido = true;
+                indice = productos.indexOf(elemento);
+                break;
+            }else{
+                incluido = false;
+            }
+        }
 
-        if (productos.includes(producto)){
+        if (incluido){
 
-            stock[productos.indexOf(producto)] += cantidad;
+            stock[indice] += cantidad;
         } else{
             productos.push(producto);
             stock.push(cantidad);
@@ -22,11 +31,25 @@ class Almacen{
 
     //permite consultar la existencia de un producto determinado, valida si este existe en el almacen
     consultarStock(producto){
-        if(productos.includes(producto)){
+        
+        let incluido;
+        let indice;
+        for (let elemento of productos){
+            if(elemento.nombre == producto.nombre){
+                incluido = true;
+                indice = productos.indexOf(elemento);
+                break;
+            }else{
+                incluido = false;
+            }
+        }
+        
+        
+        if(incluido){
 
-            return stock[productos.indexOf(producto)];
+            return stock[indice];
         } else{
-            alert("el producto", producto, "no existe en el almacen");
+            alert("el producto no existe en el almacen");
 
         }
 
@@ -34,18 +57,30 @@ class Almacen{
 
     //permite quitar stock del almacen a partir de un producto y la cantidad a quitar, si no hay suficiente no permite hacerlo.
     quitarStock(producto, cantidad){
-        
-        if(productos.includes(producto)){
+        let incluido;
+        let indice;
+        for (let elemento of productos){
+            if(elemento.nombre == producto.nombre){
+                incluido = true;
+                indice = productos.indexOf(elemento);
+                break;
+            }else{
+                incluido = false;
+            }
+        }
+
+        if(incluido){
 
             if(this.consultarStock(producto) < cantidad ){
-                alert("no hay suficiente stock, el stock actual es de " + stock[productos.indexOf(producto)] + " unidades");
+                alert("no hay suficiente stock, el stock actual es de " + stock[indice] + " unidades");
             } else
-            stock[productos.indexOf(producto)] -= cantidad;
+            stock[indice] -= cantidad;
         } 
     }
 
     //permite ver la existencia actual del almacen completa por consola.
     verAlmacen(){
+        debugger
         const almacen = [];
         
         //el objeto linea representa cada fila que se quiere cargar en la tabla, almacena, el nombre del producto el precio y la cantidad actual
@@ -72,12 +107,23 @@ class Almacen{
 
 //instancio el almacen y le agrego productos para las pruebas.
 const almacen = new Almacen();
-almacen.agregarStock(balancedGatoAd, 3);
-almacen.agregarStock(catChowAd, 2);
-almacen.agregarStock(balancedPerroAd, 7);
-almacen.agregarStock(premiumPerroAd, 8);
-almacen.agregarStock(proplanPerroAd, 4);
-almacen.agregarStock(jugueteHelado, 2);
-almacen.agregarStock(sogaYPelota, 10);
-almacen.agregarStock(huesoGoma, 2);
-almacen.agregarStock(sogaRosa, 6);
+almacen.agregarStock(correaNegra, 5);
+almacen.agregarStock(huesoGoma, 6);
+almacen.agregarStock(sogaYPelota, 3);
+almacen.agregarStock(palitaParaGato, 1);
+almacen.agregarStock(panioPet, 9);
+almacen.agregarStock(jugueteHelado, 8);
+almacen.agregarStock(collarElastizado, 10);
+almacen.agregarStock(catChowAd, 3);
+almacen.agregarStock(transportadoraAzul, 4);
+almacen.agregarStock(sogaRosa, 3);
+almacen.agregarStock(camaCelesteCorazon, 5);
+almacen.agregarStock(balancedGatoAd, 10);
+almacen.agregarStock(proplanPerroAd, 5);
+almacen.agregarStock(premiumPerroAd, 2);
+almacen.agregarStock(jaulaChica, 3);
+almacen.agregarStock(balancedPerroAd, 8);
+almacen.agregarStock(pretalChicoColor, 5);
+almacen.agregarStock(camaChicaCorazones, 3);
+almacen.agregarStock(pretalGranDeColor, 5);
+almacen.agregarStock(camaMilitar, 5);

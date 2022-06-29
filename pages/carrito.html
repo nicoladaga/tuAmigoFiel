@@ -20,6 +20,7 @@
     <script defer src="../js/variables.js"></script>
     <script defer src="../js/almacen.js"></script>
     <script defer src="../js/javascript.js"></script>
+    <script defer src="../js/carrito.js"></script>
     <link rel="stylesheet" href="../css/estilo.css">
     <title>TAF - Carrito 🐾</title>
 
@@ -57,7 +58,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white active activeNavText" aria-current="page"
-                                    href="#">Carrito</a>
+                                    href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -70,11 +71,11 @@
         <section class="row">
             
             <div class="col-md-4 mx-auto text-center">
-                <h2>Carrito de compras</h2>
+                <h2 class="border-bottom border-light border-3"> Carrito <i class="fa-solid fa-cart-shopping"></i></h2>
                 <ul class="list-unstyled" id="listadoCarrito">
                     <!--la lista se popula dinámicamente al agregar productos al carrito-->
                 </ul>
-
+                <h3 class="border-bottom border-top border-light border-3" id="totalCarrito"></h3>
                 <button type="button" class="btn btn-warning" id="botonComprar">Comprar</button>
                 <button type="button" class="btn btn-secondary" id="botonVaciar">Vaciar</button>
 
