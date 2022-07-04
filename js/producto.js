@@ -7,14 +7,6 @@ class Producto{
     this.precio = parseFloat(precio);
     }
 
-    cambiarPrecio(precio){
-        if(parseFloat(precio) >= 0){
-            this.precio = parseFloat(precio);
-        } else {
-            alert ("El precio no puede ser negativo.");
-        }
-    }   
-
 }
 
 //Instanciación de algunos productos para utilizar de prueba

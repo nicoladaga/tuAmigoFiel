@@ -8,7 +8,7 @@ for(let i = 0; i < carrito.length; i++){
 
 
 //calcula el total del carrito al entrar en la pestaña
-textoTotalCarrito.innerText = "Total: $" + verTotalCarrito();
+textoTotalCarrito.innerText = "Total: " + verTotalCarrito() || "carrito vacío"
 
 
 

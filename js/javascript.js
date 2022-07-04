@@ -9,7 +9,6 @@ function descargarCarritoDeLocalStorage(){
     let carritoJson = JSON.parse(localStorage.getItem('carrito'))
 
     for(let producto of carritoJson){
-        //carrito.push(new Producto(producto.nombre, producto.precio));
         agregarAlCarrito(new Producto(producto.nombre, producto.precio));
     }
 }
@@ -19,14 +18,31 @@ function descargarCarritoDeLocalStorage(){
 
 function agregarAlCarrito(producto){
 
+    let agregado;
     if(almacen.consultarStock(producto) > 0){
 
         carrito.push(producto);
         almacen.quitarStock(producto, 1);
         guardarCarritoEnLocalStorage();
+        agregado = true;
     } else{
         alert("no hay stock del producto seleccionado")
+        agregado = false;
     }
+    return agregado;
+}
+
+function agregarAlCarritoYNotificar(producto){
+    
+    //no era necesaria realmente la utilización del &&, no ahorra nada, pero se demuestra la aplicación 
+
+    let agregado = agregarAlCarrito(producto);
+    agregado && alert("Se agregó " + producto.nombre + " al carrito");
+    /*
+    if(agregarAlCarrito(producto)){
+        alert("Se agregó " + producto.nombre + " al carrito");
+    }
+    */
 }
 
 
@@ -57,7 +73,7 @@ function quitarDelCarrito(producto){
         const productoARemover = document.getElementById(productoARemoverId);
         productoARemover.remove();
         console.warn(`${producto.nombre} ha sido eliminado del carrito.`)
-        textoTotalCarrito.innerText = "Total: $" + verTotalCarrito();
+        textoTotalCarrito.innerText = "Total: " + verTotalCarrito() || "carrito vacío"
 
 }
 
@@ -68,7 +84,7 @@ function verTotalCarrito(){
         valoresCarrito.push(producto.precio);
     } )
     const total = valoresCarrito.reduce((acumulador, valor) => acumulador + valor, 0)
-
+    total.toFixed(2);
     return total;
 }
 

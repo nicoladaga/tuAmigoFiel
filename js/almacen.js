@@ -52,8 +52,11 @@ class Almacen{
             alert("el producto no existe en el almacen");
 
         }
-
+        
+        
     }
+    
+
 
     //permite quitar stock del almacen a partir de un producto y la cantidad a quitar, si no hay suficiente no permite hacerlo.
     quitarStock(producto, cantidad){
@@ -68,14 +71,22 @@ class Almacen{
                 incluido = false;
             }
         }
-
+        
         if(incluido){
-
+            /*
             if(this.consultarStock(producto) < cantidad ){
                 alert("no hay suficiente stock, el stock actual es de " + stock[indice] + " unidades");
             } else
             stock[indice] -= cantidad;
+            */
+            this.consultarStock(producto) < cantidad ? 
+            alert("no hay suficiente stock, el stock actual es de " + stock[indice] + " unidades") : 
+            stock[indice] -= cantidad;
+
         } 
+        
+
+        
     }
 
     //permite ver la existencia actual del almacen completa por consola.
