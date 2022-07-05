@@ -1,4 +1,4 @@
-descargarCarritoDeSessionStorage();
+descargarCarritoDeLocalStorage();
 
 btnCorreaNegra.addEventListener("click", ()=> agregarAlCarritoYNotificar(correaNegra));
 btnHuesoGoma.addEventListener("click", ()=> agregarAlCarritoYNotificar(huesoGoma));
