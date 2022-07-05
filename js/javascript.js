@@ -10,7 +10,7 @@ function guardarCarritoEnLocalStorage(){
 
 
 function descargarCarritoDeLocalStorage(){
-    localStorage.getItem("carrito") ?? localStorage.setItem(carrito, []);
+    localStorage.getItem("carrito") ?? localStorage.setItem('carrito', '[]');
     
     let carritoJson = JSON.parse(localStorage.getItem('carrito'))
 

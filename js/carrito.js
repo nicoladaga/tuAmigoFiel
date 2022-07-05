@@ -1,4 +1,4 @@
-descargarCarritoDeLocalStorage();
+descargarCarritoDeSessionStorage();
 
 //carga los elementos del carrito al HTML
 for(let i = 0; i < carrito.length; i++){
