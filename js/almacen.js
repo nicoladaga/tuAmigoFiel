@@ -62,6 +62,7 @@ class Almacen{
     quitarStock(producto, cantidad){
         let incluido;
         let indice;
+
         for (let elemento of productos){
             if(elemento.nombre == producto.nombre){
                 incluido = true;
@@ -73,12 +74,7 @@ class Almacen{
         }
         
         if(incluido){
-            /*
-            if(this.consultarStock(producto) < cantidad ){
-                alert("no hay suficiente stock, el stock actual es de " + stock[indice] + " unidades");
-            } else
-            stock[indice] -= cantidad;
-            */
+            
             this.consultarStock(producto) < cantidad ? 
             alert("no hay suficiente stock, el stock actual es de " + stock[indice] + " unidades") : 
             stock[indice] -= cantidad;

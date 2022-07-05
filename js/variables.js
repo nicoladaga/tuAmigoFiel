@@ -30,3 +30,42 @@ const btnCamaChicaCorazones = document.getElementById("camaChicaCorazones")
 const btnPretalGranDeColor = document.getElementById("pretalGranDeColor")
 const btnCamaMilitar = document.getElementById("camaMilitar")
 
+//Mensajes al usuario.
+const noHayStock = ()=>{
+    Swal.fire({
+        text: "no hay stock del producto seleccionado",
+        icon: "error",
+    }) 
+}
+
+const agregadoAlCarrito = (nombreProducto)=> {
+    Swal.fire({
+        text: "Se agregó " + nombreProducto + " al carrito",
+        icon: "success",
+        toast: true,
+        timer: 1000,
+        timerProgressBar: true,
+    }) 
+}
+
+const carritoVacio = ()=> {
+    Swal.fire({
+        title: "El carrito se encuentra vacío",
+        icon: "info",
+        showConfirmButton: false,
+        toast: true,
+        timer: 1000,
+        timerProgressBar: true
+    })
+}
+
+const continuarComprando = ()=> {
+    Swal.fire({
+        title: '¡Puede continuar comprando!',
+        icon: 'info',
+        toast: true,
+        timer: 2000,
+        timerProgressBar: true
+    })
+}
+

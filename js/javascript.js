@@ -26,7 +26,8 @@ function agregarAlCarrito(producto){
         guardarCarritoEnLocalStorage();
         agregado = true;
     } else{
-        alert("no hay stock del producto seleccionado")
+        //alert("no hay stock del producto seleccionado")
+        noHayStock();
         agregado = false;
     }
     return agregado;
@@ -34,15 +35,10 @@ function agregarAlCarrito(producto){
 
 function agregarAlCarritoYNotificar(producto){
     
-    //no era necesaria realmente la utilización del &&, no ahorra nada, pero se demuestra la aplicación 
 
     let agregado = agregarAlCarrito(producto);
-    agregado && alert("Se agregó " + producto.nombre + " al carrito");
-    /*
-    if(agregarAlCarrito(producto)){
-        alert("Se agregó " + producto.nombre + " al carrito");
-    }
-    */
+    agregado && agregadoAlCarrito(producto.nombre);
+
 }
 
 
@@ -99,23 +95,45 @@ function finalizarCompra(){
 
 
     if(verTotalCarrito() == 0){
-        alert("el carrito se encuentra vacío")
+        carritoVacio();
     } 
     else{
 
+        const confirmarCompra = ()=> {
+   
+            Swal.fire({
+                
+                title: "el total es de " + verTotalCarrito() + " ¿Desea abonar?",
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Pagar',
+                cancelButtonText: 'Continuar comprando',
+                
+            }).then((result) => {
 
-        if(confirm("el total es de " + verTotalCarrito() + " ¿Desea abonar?")){
-            
-           //este while limpia el carrito quitando el producto que se encuentra primero en la lista de manera sucesiva hasta que el carrito se encuentre vacío. uso específicamente la función quitar del carrito para que me restaure el stock y se "resetee".
-           while(carrito.length > 0){
-               quitarDelCarrito(carrito[0]);
-           }
+                if (result.isConfirmed) {
+                    //este while limpia el carrito quitando el producto que se encuentra primero en la lista de manera sucesiva hasta que el carrito se encuentre vacío. uso específicamente la función quitar del carrito para que me restaure el stock y se "resetee".
+                    while(carrito.length > 0){
+                        quitarDelCarrito(carrito[0]);
+                    }
+                    Swal.fire({
+                        title: 'Se completó la compra!',
+                        icon: 'success',
+                        toast: true,
+                        timer: 2000,
+                        timerProgressBar: true
+                    })
+                } else{
+                    continuarComprando()
 
-            console.log("se completó la transacción");
-        } 
-        else{
-            console.log("puede continuar comprando");
+                }
+            })
+
         }
+
+        confirmarCompra();
+        
+        
 
     }
 
@@ -124,24 +142,45 @@ function finalizarCompra(){
 
 
 function vaciarCarrito(){
+    
     if(verTotalCarrito() == 0){
-        alert("el carrito se encuentra vacío")
+        carritoVacio();
     } 
     else{
 
+        const vaciarCarrito = ()=> {
 
-        if(confirm("¿Está seguro que desea vaciar el carrito?")){
-            
-           //este while limpia el carrito quitando el producto que se encuentra primero en la lista de manera sucesiva hasta que el carrito se encuentre vacío. uso específicamente la función quitar del carrito para que me restaure el stock y se "resetee".
-           while(carrito.length > 0){
-               quitarDelCarrito(carrito[0]);
-           }
-           
-            console.log("El carrito se encuentra ahora vacío, puede continuar comprando");
-        } 
-        else{
-            console.log("puede continuar comprando");
+            Swal.fire({
+                
+                title: "¿Está seguro que desea vaciar el carrito?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Si, estoy seguro',
+                cancelButtonText: 'Continuar comprando',
+                
+            }).then((result) => {
+
+                if (result.isConfirmed) {
+                    //este while limpia el carrito quitando el producto que se encuentra primero en la lista de manera sucesiva hasta que el carrito se encuentre vacío. uso específicamente la función quitar del carrito para que me restaure el stock y se "resetee".
+                    while(carrito.length > 0){
+                        quitarDelCarrito(carrito[0]);
+                    }
+                    Swal.fire({
+                        title: 'Se vació el carrito',
+                        icon: 'success',
+                        toast: true,
+                        timer: 2000,
+                        timerProgressBar: true
+                    })
+                } else{
+                    continuarComprando()
+
+                }
+            })
+
         }
+
+        vaciarCarrito();
 
     }
 
