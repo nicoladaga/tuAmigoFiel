@@ -1,4 +1,4 @@
-localStorage.getItem("carrito") ?? localStorage.setItem(carrito, []);
+
 
 
 //función que guarda el carrito en local Storage
@@ -10,6 +10,8 @@ function guardarCarritoEnLocalStorage(){
 
 
 function descargarCarritoDeLocalStorage(){
+    localStorage.getItem("carrito") ?? localStorage.setItem(carrito, []);
+    
     let carritoJson = JSON.parse(localStorage.getItem('carrito'))
 
     for(let producto of carritoJson){
