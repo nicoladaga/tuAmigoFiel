@@ -87,7 +87,6 @@ class Almacen{
 
     //permite ver la existencia actual del almacen completa por consola.
     verAlmacen(){
-        debugger
         const almacen = [];
         
         //el objeto linea representa cada fila que se quiere cargar en la tabla, almacena, el nombre del producto el precio y la cantidad actual

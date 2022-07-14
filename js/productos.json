@@ -1,0 +1,164 @@
+[
+    {
+        "id":1,
+        "segmento": "Alimentos",
+        "imagen": "../media/Alimentos/balanced-gatoAdulto.jpg",
+        "nombre": "Balanced Gato Adulto",
+        "precio": "5000",
+        "boton": "balancedGatoAd"
+    },
+    {
+        "id":2,
+        "segmento": "Alimentos",
+        "imagen": "../media/Alimentos/CatChow-adulto.jpg",
+        "nombre": "CatChow Adulto",
+        "precio": "4000",
+        "boton": "catChowAd"
+     },
+     {
+        "id":3,
+        "segmento": "Alimentos",
+        "imagen": "../media/Alimentos/Balance-perroAdulto.jpg",
+        "nombre": "Balanced Perro adulto",
+        "precio": "3500",
+        "boton": "balancedPerroAd"
+     },
+     {
+        "id":4,
+        "segmento": "Alimentos",
+        "imagen": "../media/Alimentos/premium-perroAdulto.jpg",
+        "nombre": "Premium Perro Adulto",
+        "precio": "3200",
+        "boton": "premiumPerroAd"
+     },
+     {
+        "id":5,
+        "segmento": "Alimentos",
+        "imagen": "../media/Alimentos/Proplan-perroAdulto.jpg",
+        "nombre": "Proplan Perro Adulto",
+        "precio": "4300",
+        "boton": "proplanPerroAd"
+     },
+     {
+        "id":6,
+        "segmento": "Juguetes",
+        "imagen": "../media/juguetes/JugueteHelado.jpg",
+        "nombre": "Helado de Juguete",
+        "precio": "650",
+        "boton": "jugueteHelado"
+     },
+     {
+        "id":7,
+        "segmento": "Juguetes",
+        "imagen": "../media/juguetes/PelotaySoga.jpg",
+        "nombre": "Soga y pelota",
+        "precio": "620",
+        "boton": "sogaYPelota"
+     },
+     {
+        "id":8,
+        "segmento": "Juguetes",
+        "imagen": "../media/juguetes/jugueteHuesoGoma.jpg",
+        "nombre": "Hueso de goma",
+        "precio": "420",
+        "boton": "huesoGoma"
+     },
+     {
+        "id":9,
+        "segmento": "Juguetes",
+        "imagen": "../media/juguetes/jugueteRosaPerro.jpg",
+        "nombre": "Soga rosa",
+        "precio": "520",
+        "boton": "sogaRosa"
+     },
+     {
+        "id":10,
+        "segmento": "CollaresYPretales",
+        "imagen": "../media/collaresYPretales/collaresElastizado.jpg",
+        "nombre": "Collar Elastizado",
+        "precio": "220",
+        "boton": "collarElastizado"
+     },
+     {
+        "id":11,
+        "segmento": "CollaresYPretales",
+        "imagen": "../media/collaresYPretales/correaNegra.jpg",
+        "nombre": "Correa negra",
+        "precio": "320",
+        "boton": "correaNegra"
+     },
+     {
+        "id":12,
+        "segmento": "CollaresYPretales",
+        "imagen": "../media/collaresYPretales/pretalColoresChico.jpg",
+        "nombre": "Pretal chico color",
+        "precio": "500",
+        "boton": "pretalChicoColor"
+     },
+     {
+        "id":13,
+        "segmento": "CollaresYPretales",
+        "imagen": "../media/collaresYPretales/pretalColoresGrande.jpg",
+        "nombre": "Pretal grande color",
+        "precio": "700",
+        "boton": "pretalGranDeColor"
+     },
+     {
+        "id":14,
+        "segmento": "Higiene",
+        "imagen": "../media/higiene/pañoPet.jpg",
+        "nombre": "Paño Pet pequeño",
+        "precio": "800",
+        "boton": "panioPet"
+     },
+     {
+        "id":15,
+        "segmento": "Higiene",
+        "imagen": "../media/higiene/palitaParaGato.jpg",
+        "nombre": "Palita para gato",
+        "precio": "150",
+        "boton": "palitaParaGato"
+     },
+     {
+        "id":16,
+        "segmento": "Camas",
+        "imagen": "../media/camas/camaCelesteCorazon.jpg",
+        "nombre": "Cama celeste corazón",
+        "precio": "2800",
+        "boton": "camaCelesteCorazon"
+     },
+     {
+        "id":17,
+        "segmento": "Camas",
+        "imagen": "../media/camas/camaCorazonMilitar.jpg",
+        "nombre": "Cama militar corazón",
+        "precio": "2800",
+        "boton": "camaMilitar"
+     },
+     {
+        "id":18,
+        "segmento": "Camas",
+        "imagen": "../media/camas/camaChicaCorazones.jpg",
+        "nombre": "Cama chica corazones",
+        "precio": "3200",
+        "boton": "camaChicaCorazones"
+     },
+     {
+        "id":19,
+        "segmento": "TranspYJaulas",
+        "imagen": "../media/transportadorasYJaulas/JaulaPajaroChica.jpg",
+        "nombre": "Jaula chica",
+        "precio": "5200",
+        "boton": "jaulaChica"
+     },
+     {
+        "id":20,
+        "segmento": "TranspYJaulas",
+        "imagen": "../media/transportadorasYJaulas/transportadoraAzulFlores.jpg",
+        "nombre": "Transportadora azul",
+        "precio": "4200",
+        "boton": "transportadoraAzul"
+     }
+
+
+]

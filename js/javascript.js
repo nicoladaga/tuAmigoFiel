@@ -23,7 +23,7 @@ function descargarCarritoDeLocalStorage(){
 //Función que permite agregar productos al carrito si hay stock suficiente
 
 function agregarAlCarrito(producto){
-
+    
     let agregado;
     if(almacen.consultarStock(producto) > 0){
 
@@ -41,9 +41,7 @@ function agregarAlCarrito(producto){
 
 function agregarAlCarritoYNotificar(producto){
     
-
-    let agregado = agregarAlCarrito(producto);
-    agregado && agregadoAlCarrito(producto.nombre);
+    agregarAlCarrito(producto) && agregadoAlCarrito(producto.nombre);
 
 }
 
@@ -109,8 +107,8 @@ function finalizarCompra(){
    
             Swal.fire({
                 
-                title: "el total es de " + verTotalCarrito() + " ¿Desea abonar?",
-                icon: 'info',
+                title: "el total es de $" + verTotalCarrito() + " ¿Desea abonar?",
+                icon: 'question',
                 showCancelButton: true,
                 confirmButtonText: 'Pagar',
                 cancelButtonText: 'Continuar comprando',
