@@ -49,7 +49,8 @@ class Almacen{
 
             return stock[indice];
         } else{
-            alert("el producto no existe en el almacen");
+            //este error se da cuando por algún motivo el producto que el usuario clickeó para agregar al carrito no existe en el almacen (no es que no hay stock sino que es nulo). No debería darse, pero si se da, es necesariamente un error en el código.
+            errorInterno();
 
         }
         
@@ -76,7 +77,8 @@ class Almacen{
         if(incluido){
             
             this.consultarStock(producto) < cantidad ? 
-            alert("no hay suficiente stock, el stock actual es de " + stock[indice] + " unidades") : 
+            //por el momento el usuario solo puede sumar de a 1 producto a la vez así que este mensaje no va a surgir, si se agrega la posibilidad de agregar multiple stock mediante input esto se volverá funcional.
+            noHayStockSuficiente(stock[indice]): 
             stock[indice] -= cantidad;
 
         } 
@@ -87,6 +89,7 @@ class Almacen{
 
     //permite ver la existencia actual del almacen completa por consola.
     verAlmacen(){
+        
         const almacen = [];
         
         //el objeto linea representa cada fila que se quiere cargar en la tabla, almacena, el nombre del producto el precio y la cantidad actual

@@ -26,6 +26,20 @@ const noHayStock = ()=>{
     }) 
 }
 
+const noHayStockSuficiente = (cantidad)=>{
+    Swal.fire({
+        text: "no hay suficiente stock, el stock actual es de " + cantidad + " unidades",
+        icon: "error",
+    }) 
+}
+
+const errorInterno = ()=>{
+    Swal.fire({
+        text: "Lo sentimos, ha habido un error, por favor comuniquese con nosotros para hacer su consulta.",
+        icon: "error",
+    }) 
+}
+
 const agregadoAlCarrito = (nombreProducto)=> {
     Swal.fire({
         text: "Se agregó " + nombreProducto + " al carrito",

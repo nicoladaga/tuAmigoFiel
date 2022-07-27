@@ -1,5 +1,7 @@
+// Se descarga el carrito del localStorage para mantener actualizado el stock de los productos.
 descargarCarritoDeLocalStorage();
 
+//función que genera el HTML del contenido de productos.json para proder cargarlo en productos.html
 const retornoCardContenido = (contenido) => {
     const { imagen, nombre, precio, boton, segmento } = contenido 
 
@@ -24,6 +26,7 @@ const retornoCardContenido = (contenido) => {
     return retorno;
 }
 
+//constantes y funciones encargadas de ordenar y dar formato al contenido HTML a cargar en productos.html. La constante listeners permite almacenar todos los botones que podrá utilizar el usuario para agregar un producto al carrito.
 const registros = [];
 const listeners = [];
 const obtenerContenido = (URL) =>{
@@ -101,49 +104,3 @@ obtenerContenido(URL)
 
 
 
-/*
-//botones agregar al carrito de Productos.html
-const btnCorreaNegra = document.getElementById("correaNegra")
-const btnHuesoGoma = document.getElementById("huesoGoma")
-const btnSogaYPelota = document.getElementById("sogaYPelota")
-const btnPalitaParaGato = document.getElementById("palitaParaGato")
-const btnPanioPet = document.getElementById("panioPet")
-const btnJugueteHelado = document.getElementById("jugueteHelado")
-const btnCollarElastizado = document.getElementById("collarElastizado")
-const btnCatChowAd = document.getElementById("catChowAd")
-const btnTransportadoraAzul = document.getElementById("transportadoraAzul")
-const btnSogaRosa = document.getElementById("sogaRosa")
-const btnCamaCelesteCorazon = document.getElementById("camaCelesteCorazon")
-const btnBalancedGatoAd = document.getElementById("balancedGatoAd")
-const btnProplanPerroAd = document.getElementById("proplanPerroAd")
-const btnPremiumPerroAd = document.getElementById("premiumPerroAd")
-const btnJaulaChica = document.getElementById("jaulaChica")
-const btnBalancedPerroAd = document.getElementById("balancedPerroAd")
-const btnPretalChicoColor = document.getElementById("pretalChicoColor")
-const btnCamaChicaCorazones = document.getElementById("camaChicaCorazones")
-const btnPretalGranDeColor = document.getElementById("pretalGranDeColor")
-const btnCamaMilitar = document.getElementById("camaMilitar")
-
-
-btnCorreaNegra.addEventListener("click", () => agregarAlCarritoYNotificar(correaNegra));
-btnHuesoGoma.addEventListener("click", () => agregarAlCarritoYNotificar(huesoGoma));
-btnSogaYPelota.addEventListener("click", () => agregarAlCarritoYNotificar(sogaYPelota));
-btnPalitaParaGato.addEventListener("click", () => agregarAlCarritoYNotificar(palitaParaGato));
-btnPanioPet.addEventListener("click", () => agregarAlCarritoYNotificar(panioPet));
-btnJugueteHelado.addEventListener("click", () => agregarAlCarritoYNotificar(jugueteHelado));
-btnCollarElastizado.addEventListener("click", () => agregarAlCarritoYNotificar(collarElastizado));
-btnCatChowAd.addEventListener("click", () => agregarAlCarritoYNotificar(catChowAd));
-btnTransportadoraAzul.addEventListener("click", () => agregarAlCarritoYNotificar(transportadoraAzul));
-btnSogaRosa.addEventListener("click", () => agregarAlCarritoYNotificar(sogaRosa));
-btnCamaCelesteCorazon.addEventListener("click", () => agregarAlCarritoYNotificar(camaCelesteCorazon));
-btnBalancedGatoAd.addEventListener("click", () => agregarAlCarritoYNotificar(balancedGatoAd));
-btnProplanPerroAd.addEventListener("click", () => agregarAlCarritoYNotificar(proplanPerroAd));
-btnPremiumPerroAd.addEventListener("click", () => agregarAlCarritoYNotificar(premiumPerroAd));
-btnJaulaChica.addEventListener("click", () => agregarAlCarritoYNotificar(jaulaChica));
-btnBalancedPerroAd.addEventListener("click", () => agregarAlCarritoYNotificar(balancedPerroAd));
-btnPretalChicoColor.addEventListener("click", () => agregarAlCarritoYNotificar(pretalChicoColor));
-btnCamaChicaCorazones.addEventListener("click", () => agregarAlCarritoYNotificar(camaChicaCorazones));
-btnPretalGranDeColor.addEventListener("click", () => agregarAlCarritoYNotificar(pretalGranDeColor));
-btnCamaMilitar.addEventListener("click", () => agregarAlCarritoYNotificar(camaMilitar));
-
-*/
